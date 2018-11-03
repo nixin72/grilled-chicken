@@ -6,13 +6,8 @@
     "axios": "^0.18.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-<<<<<<< HEAD
     "react-dropzone": "^7.0.1",
     "react-router-dom": "^4.3.1",
-=======
-    "react-router-dom": "^4.3.1",
-    "react-dropzone": "^7.0.1",
->>>>>>> 5b0a525fafd7de1eb9ae4165d03ef6639885f390
     "react-scripts": "2.1.1"
   },
   "scripts": {
