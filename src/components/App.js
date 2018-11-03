@@ -5,7 +5,7 @@ import './App.css';
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Home from "./Pages/Home/Home";
-import PostAnimal from "./Pages/PostAnimal/PostAnimal";
+import PostPage from "./Pages/PostPage/PostPage";
 import Search from "./Pages/Search/Search";
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
                     />
                     <Route
                         exact path="/post"
-                        render={(props) => <PostAnimal
+                        render={(props) => <PostPage
                             {...props}
                         />}
                     />
