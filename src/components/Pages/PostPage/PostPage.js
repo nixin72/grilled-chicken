@@ -10,17 +10,17 @@ class PostPage extends Component {
         name: '',
          email: '',
          textbox: '',
-         file: ''
+         files: []
     };
   }
 
-  onDrop(file){
-    this.setState({file});
+  onDrop(files){
+    this.setState({files});
   }
 
   onCancel(){
     this.setState({
-      file: ''
+      files: []
     });
   }
 
@@ -33,6 +33,13 @@ class PostPage extends Component {
     axios.post('/animals', JSON.stringify({name, email, textbox, file}));
   }
 
+  handleChange = (event) => {
+    this.setState({
+      name: event.target.name,
+      email: event.target.email,
+      files: event.target.files
+    });
+  }
 
   render() {
     return (
@@ -42,15 +49,30 @@ class PostPage extends Component {
         <Dropzone
         multiple={false}
         onDrop={this.onDrop.bind(this)}
-        onFileDialogCancel={this.onCancel.bind(this)}>
+        onFileDialogCancel={this.onCancel.bind(this)}
+        >
         <p>Drop a photo of your pet here ^^</p>
         </Dropzone>
         </div>
         <h2>Dropped photo</h2>
-        <ul>{this.state.file.name - this.state.file.size}</ul>
-        <input placeholder="Name" className="nameInput" type="text" value={this.state.name}/>
-        <input placeholder="Email" type="email" className="emailInput" value={this.state.email}/>
-        <textarea placeholder="What I want for my pet" className="perfectMatch" value={this.state.textbox}/>
+        <ul>{this.state.files.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)}</ul>
+        <input 
+        type="text"
+        placeholder="Name" 
+        className="nameInput"  
+        value={this.state.name} 
+        onChange={this.handleChange}/>
+        <input  
+        type="email" 
+        placeholder="Email"
+        className="emailInput" 
+        value={this.state.email} 
+        onChange={this.handleChange}/>
+        <textarea placeholder="What I want for my pet" 
+        className="perfectMatch" 
+        value={this.state.textbox}
+        onChange={this.handleChange}
+        />
         <input type="submit" value= "Submit"/>
         <input type="submit" value="Clear" onClick={this.clearForm}/>
         </form>
