@@ -31,8 +31,6 @@ export class Card extends Component {
     }
 }
 
-
-
 class Search extends Component {
     constructor(props) {
         super(props);
@@ -57,6 +55,8 @@ class Search extends Component {
                     <hr width="1" size="10" />
                     <hr width="1" size="10" />
                 </button>
+                
+                    
                 <section id="searchForm">
                     <form>
                         <div className="facet">
@@ -137,9 +137,14 @@ class Search extends Component {
                             </div>
                         </div>
                     </form>
-                </section>                
-
-                <Card />
+                </section>   
+                          
+                <div class="flex">
+                    <img src={'/image/arrowprev.png'} height="50"/>
+                    <Card />
+                    <img src={'./image/arrownext.png'} height="50"/>
+                </div>
+                
             </section>
         );
     }
