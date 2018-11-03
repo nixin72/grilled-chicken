@@ -4,7 +4,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Home from "./Pages/Home/Home";
 import PostAnimal from "./Pages/PostAnimal/PostAnimal";
-import SearchAnimal from "./Pages/SearchAnimal/SearchAnimal";
+import Search from "./Pages/SearchAnimal/SearchAnimal";
 
 class App extends Component {
     render() {
@@ -26,7 +26,7 @@ class App extends Component {
                     />
                     <Route
                         exact path="/search"
-                        render={(props) => <SearchAnimal
+                        render={(props) => <Search
                             {...props}
                         />}
                     />
