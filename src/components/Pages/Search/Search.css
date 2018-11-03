@@ -3,6 +3,10 @@
     border: thin solid black;
 }
 
+.flex {
+    display: flex;
+}
+
 #searchForm {
     width: 40%;
     margin: auto;
