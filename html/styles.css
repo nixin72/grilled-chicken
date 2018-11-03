@@ -1,0 +1,60 @@
+body {
+  background-color:  #dadfe1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 350px;
+  font-family: "Muli", sans-serif;
+}
+
+.card {
+  background-color: white;
+  font-family: "Muli", sans-serif;
+  margin: 0 auto;
+  max-width: 320px;
+  text-align: center;
+  border: double medium #af9fa5;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px 0px #af9fa5;
+}
+
+.name {
+  font-family: "Raleway", sans-serif;
+  text-shadow: 4px 4px 4px #af9fa5;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.picture {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+img {
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px #af9fa5;
+}
+
+#info {
+  border: solid thin #af9fa5;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.angle-text {
+  font-style: italic;
+}
+
+p{
+  text-align: left;
+  max-width: 300px;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+.bold-text {
+  font-weight: 900;
+}
