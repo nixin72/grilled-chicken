@@ -5,7 +5,7 @@ import './Header.css';
 class Header extends Component {
     render() {
         return (
-            <nav className="Header navbar justify-content-center navbar-dark bg-dark fixed-top">
+            <nav className="Header navbar justify-content-center navbar-light bg-light fixed-top">
 
                 <Link className="navbar-brand" to={'/'}>
                     <img src="/image/logo-paws.png" width="30" height="30" className="d-inline-block align-top" alt=""/>
