@@ -1,0 +1,59 @@
+#pet_card {
+    margin: auto;
+    border: thin solid black;
+}
+
+#searchPage {
+    display: flex;
+    margin: 1%;
+    align-content: center;
+    
+}
+
+#vote img {
+    margin: 0 15%;
+}
+
+#pet_display {
+    width: 40%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#searchForm {
+    width: 100%;
+    margin: auto;
+    display: none;
+}
+
+.facet {
+    margin: auto;
+    display: flex;
+}
+
+.dropDownButton {
+    display: flex;
+}
+
+.form_section span {
+    text-align: right;
+    border-bottom: thin solid black;
+    font-size: 1.5em;
+}
+
+.facet div:first-child {
+    text-align: right;
+    width: 60%;
+    margin-right: 2%;
+}
+
+.facet div:last-child {
+    text-align: left;
+    width: 40%;
+    margin-left: 2%;
+}
