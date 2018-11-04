@@ -1,6 +1,7 @@
 #pet_card {
     margin: auto;
     border: thin solid black;
+    background-color: whitesmoke;
 }
 
 #searchPage {
@@ -10,6 +11,11 @@
     
 }
 
+#petImage img {
+    width: 300px;
+    height: 205px;
+}
+
 #vote img {
     margin: 0 15%;
 }
@@ -17,6 +23,10 @@
 #pet_display {
     width: 40%;
     margin: auto;
+}
+
+#petDescription {
+    margin: 1rem;
 }
 
 .flex {
