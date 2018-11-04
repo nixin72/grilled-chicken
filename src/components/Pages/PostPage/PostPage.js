@@ -15,7 +15,10 @@ class PostPage extends Component {
   }
 
   onDrop(files){
-    this.setState({files});
+    this.setState({files: files.map(file => ({
+      ...file,
+      preview: URL.createObjectURL(file)
+    }))});
   }
 
   onCancel(){
@@ -33,17 +36,34 @@ class PostPage extends Component {
     axios.post('/animals', JSON.stringify({name, email, textbox, file}));
   }
 
-  handleChange = (event) => {
+  handleInputChange = (event) => {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
+
     this.setState({
-      name: event.target.name,
-      email: event.target.email,
-      files: event.target.files
+      [name]: value
     });
   }
 
   render() {
+    const {files} = this.state;
+    let thumbs = ''
+    if(files){
+    thumbs = files.map(file => (
+      <div>
+      <div>
+      <img 
+      src={file.preview}
+      />
+      </div>
+      </div>
+    ));
+  }
+    
+
     return (
-      <div className="postPage">
+      <div className="PostPage">
         <form id="posterForm" onSubmit={this.handleSubmit}>
         <div className="dropzone">
         <Dropzone
@@ -55,23 +75,32 @@ class PostPage extends Component {
         </Dropzone>
         </div>
         <h2>Dropped photo</h2>
-        <ul>{this.state.files.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)}</ul>
-        <input 
+        <aside>
+        {thumbs}
+        </aside>
+        <input
+        name="name"
         type="text"
         placeholder="Name" 
-        className="nameInput"  
+        className="nameInput"
+        required={true}  
         value={this.state.name} 
-        onChange={this.handleChange}/>
+        onChange={this.handleInputChange}/>
         <input  
+        name="email"
         type="email" 
         placeholder="Email"
         className="emailInput" 
         value={this.state.email} 
-        onChange={this.handleChange}/>
+        onChange={this.handleInputChange}
+        required={true}
+        />
         <textarea placeholder="What I want for my pet" 
+        name="textbox"
         className="perfectMatch" 
         value={this.state.textbox}
-        onChange={this.handleChange}
+        onChange={this.handleInputChange}
+        required={true} 
         />
         <input type="submit" value= "Submit"/>
         <input type="submit" value="Clear" onClick={this.clearForm}/>
