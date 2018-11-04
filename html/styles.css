@@ -1,11 +1,68 @@
 body {
-  background-color:  #dadfe1;
+  background-color:  rgba(99, 34, 99, 0.849);
   margin-left: auto;
   margin-right: auto;
-  max-width: 350px;
   font-family: "Muli", sans-serif;
 }
 
+#bg-main {
+  background-image: url(bg-doggies.jpg);
+  background-size: cover;
+  background-position: center center;
+
+}
+/* left jumbotron image */
+.placeHome {
+  background-image: url(pickme.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding-top: 1rem;
+  height: 225px;
+  margin-top: 1rem;
+  width: 100%;
+}
+/* right jumbotron image */
+.findDog {
+  background-image: url(searching.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding-top: 1rem;
+  height: 225px;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.write {
+  text-align: center;
+  font-size: 50%;
+  font-weight: lighter;
+  padding-top: 1em;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: rgb(109, 45, 109);
+}
+a {
+  color: rgb(109, 45, 109) !important;
+}
+h4 {
+  color: lightgray!important;
+}
+.container-full {
+  margin-top: 900px;
+  background-image: url(bg-doggies.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat'
+}
+.container-home {
+  margin-top: -900px;
+  padding-top: 24px;
+  /* margin-bottom: -600px; */
+  padding: 0 !important;
+  background: none;
+}
+
+/* individual cards */
 .card {
   background-color: white;
   font-family: "Muli", sans-serif;
@@ -29,9 +86,11 @@ body {
   padding-bottom: 10px;
 }
 
-img {
+img .card{
   border-radius: 15px;
   box-shadow: 3px 3px 3px 3px #af9fa5;
+  width: 290px;
+  height: 200px;
 }
 
 #info {
