@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './PetCard.css';
 
 class PetCard extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         // this.state = {
         //     currentPet: undefined,
         // }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         // this.setState({
         //     currentPer: this.props.pet,
         // })
@@ -35,6 +35,14 @@ class PetCard extends Component {
 
                 <section id="petDescription" onLoad={this.hideEmptyFields}>
                     <div>
+                        {
+                            pet.name
+                                ? <div className="petData">
+                                    <label>Name: </label>
+                                    <span id="name">{pet.name}</span>
+                                </div>
+                                : ''
+                        }
                         <div className="petData">
                             <label>Name: </label>
                             <span id="name">{this.props.pet.name}</span>
