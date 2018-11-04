@@ -1,0 +1,13 @@
+.write {
+    text-align: center;
+    font-size: 50%;
+    font-weight: lighter;
+    padding-top: 1em;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgb(109, 45, 109);
+  }
+  
+  a {
+    color: rgb(109, 45, 109) !important;
+  }
