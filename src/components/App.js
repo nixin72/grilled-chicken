@@ -47,6 +47,7 @@ class App extends Component {
             <div className="App">
                 <Header/>
                 <DbContext.Provider value={{
+                    authUser: Auth[1],
                     animalPropositionsDb: this.state.animalPropositionsDb,
                     animalDesireDb: this.state.animalDesireDb,
                     doAuth: this.doAuth,
