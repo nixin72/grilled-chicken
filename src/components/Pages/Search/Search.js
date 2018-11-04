@@ -25,6 +25,7 @@ class Search extends Component {
             this.getPrevPet = this.getPrevPet.bind(this);
             this.openModal = this.openModal.bind(this);
             this.closeModal = this.closeModal.bind(this);
+            this.filterResults = this.filterResults.bind(this);
         }
 
         openModal() {
@@ -70,7 +71,8 @@ class Search extends Component {
         });
     }
 
-    filterResults(facets) {
+    filterResults() {
+        let facets = new FormData(document.querySelector('form'));
         console.log(facets);
     }
 
@@ -168,7 +170,7 @@ class Search extends Component {
                                 </div>
                             </div>
                         </form>
-                        <input type="button" value="Apply Filter" onClick={this.filterResults(new FormData(document.querySelector('form')))} />
+                        <input type="button" value="Apply Filter" onClick={this.filterResults} />
                     </section>
                 </div>
 

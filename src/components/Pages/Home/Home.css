@@ -1,0 +1,88 @@
+.Home {
+    /*margin-top: 900px;*/
+    background-image: url(/image/bg-doggies.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.Home .placeHome {
+    background-image: url(/image/pickme.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding-top: 1rem;
+    height: 225px;
+    margin-top: 1rem;
+    width: 100%;
+    align-content: space-around;
+}
+
+
+
+/* right jumbotron image */
+.Home .findDog {
+    background-image: url(/image/searching.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding-top: 1rem;
+    height: 225px;
+    margin-top: 1rem;
+    width: 100%;
+    align-content: space-around;
+}
+
+
+.Home a {
+    color: rgb(109, 45, 109) !important;
+}
+
+.Home h4 {
+    color: rgba(99, 34, 99, 0.849)!important;
+}
+
+
+.Home .jumbotron h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto;
+    border-color:rgba(99, 34, 99, 0.849);
+}
+
+.Home .button-text {
+    color:rgba(99, 34, 99, 0.849);
+}
+.Home .text-right{
+    margin-top: -3rem;
+    text-align: right;
+    color: whitesmoke;
+    margin: auto;
+}
+
+.Home .text-center{
+    margin-top: -3rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.container-home {
+    margin-top: -900px;
+    padding-top: 24px;
+    padding: 0 !important;
+    background: none;
+    background-color: rgba(99, 34, 99, 0.849);
+    display: flex;}
+
+.Home p{
+    text-align: left;
+    max-width: 300px;
+}
+
+.Home ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.Home .bold-text {
+    color:rgba(99, 34, 99, 0.849);
+    font-weight: 900;
+}
