@@ -8,6 +8,9 @@
     margin: auto;
     justify-content: center;
     text-align: center;
+    background: rgba(99,34,99,.849);
+    color: white;
+    padding: 1%;
 }
 
 .flex > div {

@@ -2,13 +2,16 @@
     margin: auto;
     border: thin solid black;
     text-align: left;
+    color: rgba(99,34,99);
 }
 
 #searchPage {
     display: flex;
     margin: 1%;
     align-content: center;
-    
+    background: rgba(99,34,99,.849);
+    color: white;
+    padding: 1%;
 }
 
 #vote img {

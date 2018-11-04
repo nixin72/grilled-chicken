@@ -71,10 +71,10 @@
           <form id="posterForm" onSubmit={this.handleSubmit}>
           <div className="dropzone">
           <Dropzone
-          className="dropZone"
-          multiple={false}
-          onDrop={this.onDrop.bind(this)}
-          onFileDialogCancel={this.onCancel.bind(this)}
+            className="dropZone"
+            multiple={false}
+            onDrop={this.onDrop.bind(this)}
+            onFileDialogCancel={this.onCancel.bind(this)}
           >
           <p className="dropText">Drop a photo of your pet here ^^</p>
           </Dropzone>
@@ -83,28 +83,28 @@
           {thumbs}
           </aside>
           <input
-          name="name"
-          type="hidden"
-          placeholder={logInUser.name}
-          className="inputBox"
-          required={true}
-          value={logInUser.name} 
-          onChange={this.handleInputChange}/>
+            name="name"
+            type="hidden"
+            placeholder={logInUser.name}
+            className="inputBox"
+            required={true}
+            value={logInUser.name} 
+            onChange={this.handleInputChange}/>
           <input  
-          name="email"
-          type="hidden" 
-          placeholder="Email"
-          className="email"
-          value={logInUser.email} 
-          onChange={this.handleInputChange}
-          required={true}
+            name="email"
+            type="hidden" 
+            placeholder="Email"
+            className="email"
+            value={logInUser.email} 
+            onChange={this.handleInputChange}
+            required={true}
           />
           <textarea placeholder="What I want for my pet" 
-          name="textbox"
-          className="perfectMatch" 
-          value={this.state.textbox}
-          onChange={this.handleInputChange}
-          required={true} 
+            name="textbox"
+            className="perfectMatch" 
+            value={this.state.textbox}
+            onChange={this.handleInputChange}
+            required={true} 
           />
           <input className="button" type="submit" value= "Submit"/>
           <input className="button" type="submit" value="Clear" onClick={this.clearForm}/>
