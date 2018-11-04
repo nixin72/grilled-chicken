@@ -28,7 +28,12 @@ class PostPage extends Component {
   }
 
   clearForm = () => {
-    document.getElementById("posterForm").reset();
+    this.setState({
+      name: '',
+      email: '',
+      textbox: '',
+      files: []
+    });
   }
 
   handleSubmit = (event) => {
