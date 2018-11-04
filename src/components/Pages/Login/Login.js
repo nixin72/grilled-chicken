@@ -13,8 +13,21 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-          {/*{this.context.auth[1].name}*/}
-        Login
+        <h1>Sign in here!</h1>
+        <div className="flex">
+          <div>
+            <label>Username: </label><br />
+            <label>password: </label>
+          </div>
+
+          <div>
+            <input type="text" /><br />
+            <input type="password" />
+          </div>  
+        </div>
+
+        <input type="submit" value="Log In" />
+        
       </div>
     );
   }

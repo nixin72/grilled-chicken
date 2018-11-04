@@ -174,9 +174,12 @@ class Search extends Component {
                     </section>
                 </div>
 
+                
                 <div id="pet_display" className="flex">
+                    
                     <img src={'/image/arrowprev.png'} height="50" onClick={this.getPrevPet} alt="Previous Pet"/>
                     <div>
+                        <h1>Pets in your area!</h1>
                         { this.state.currentPet
                                 ?
                                 <PetCard pet={this.state.currentPet}/>
