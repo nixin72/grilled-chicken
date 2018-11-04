@@ -74,15 +74,15 @@
           <form id="posterForm" onSubmit={this.handleSubmit}>
           <div className="dropzone">
           <Dropzone
-          classID="dropZone"
+          className="dropZone"
           multiple={false}
           onDrop={this.onDrop.bind(this)}
           onFileDialogCancel={this.onCancel.bind(this)}
           >
-          <p>Drop a photo of your pet here ^^</p>
+          <p className="dropText">Drop a photo of your pet here ^^</p>
           </Dropzone>
           </div>
-          <h2>Dropped photo</h2>
+          <h2 className="titleDrop">Dropped photo</h2>
           <aside>
           {thumbs}
           </aside>
@@ -90,7 +90,7 @@
           name="name"
           type="text"
           placeholder={petOwner.email}
-          className="nameInput"
+          className="inputBox"
           required={true}
           value={petOwner.email} 
           onChange={this.handleInputChange}/>
@@ -98,7 +98,7 @@
           name="email"
           type="email" 
           placeholder="Email"
-          className="emailInput"
+          className="email"
           value={petOwner.email} 
           onChange={this.handleInputChange}
           required={true}
