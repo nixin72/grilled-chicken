@@ -74,6 +74,7 @@
           <form id="posterForm" onSubmit={this.handleSubmit}>
           <div className="dropzone">
           <Dropzone
+          classID="dropZone"
           multiple={false}
           onDrop={this.onDrop.bind(this)}
           onFileDialogCancel={this.onCancel.bind(this)}
@@ -88,7 +89,7 @@
           <input
           name="name"
           type="text"
-          placeholder="Name" 
+          placeholder={petOwner.email}
           className="nameInput"
           required={true}
           value={petOwner.email} 
@@ -109,8 +110,8 @@
           onChange={this.handleInputChange}
           required={true} 
           />
-          <input type="submit" value= "Submit"/>
-          <input type="submit" value="Clear" onClick={this.clearForm}/>
+          <input className="button" type="submit" value= "Submit"/>
+          <input className="button" type="submit" value="Clear" onClick={this.clearForm}/>
           </form>
         </div>
       );
