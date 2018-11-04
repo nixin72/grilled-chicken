@@ -3,12 +3,25 @@
     border: thin solid black;
 }
 
+#searchPage {
+    display: flex;
+    margin: 1%;
+    align-content: center;
+    
+}
+
+#pet_display {
+    width: 40%;
+    margin: auto;
+}
+
 .flex {
     display: flex;
+    align-items: flex-start;
 }
 
 #searchForm {
-    width: 40%;
+    width: 100%;
     margin: auto;
     display: none;
 }
@@ -30,12 +43,12 @@
 
 .facet div:first-child {
     text-align: right;
-    width: 50%;
+    width: 60%;
     margin-right: 2%;
 }
 
 .facet div:last-child {
     text-align: left;
-    width: 50%;
+    width: 40%;
     margin-left: 2%;
 }

@@ -10,7 +10,6 @@ class Footer extends Component {
                     <a
                         className={"mx-1"}
                         href="https://github.com/CSumm"
-                        target="_blank"
                         title="Carl Summers">
                         Carl Summers
                     </a>
@@ -18,14 +17,12 @@ class Footer extends Component {
                     <a
                         className={"mx-1"}
                         href="https://github.com/olegsmall"
-                        target="_blank"
                         title="Oleg Smolovyk">
                         Oleg Smolovyk
                     </a>
 
                     <a className={"mx-1"}
                        href="https://github.com/phdumaresq"
-                       target="_blank"
                        title="Philip Dumaresq">
                         Philip Dumaresq
                     </a>
@@ -33,7 +30,6 @@ class Footer extends Component {
                     <a
                         className={"mx-1"}
                         href="https://github.com/jessefuterman"
-                        target="_blank"
                         title="Jesse Futerman">
                         Jesse Futerman
                     </a>
@@ -41,7 +37,6 @@ class Footer extends Component {
                     <a
                         className={"mx-1"}
                         href="https://github.com/Michelle-Lefebvre"
-                        target="_blank"
                         title="Michelle Lefebvre">
                         Michelle Lefebvre
                     </a>
