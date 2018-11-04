@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import './Search.css';
 import pets from "./pets.js";
 import DbContext from './../../../store/db-context';
+import Modal from 'react-modal';
+import {Redirect} from 'react-router-dom';
 
 import PetCard from './PetCard/PetCard';
 
