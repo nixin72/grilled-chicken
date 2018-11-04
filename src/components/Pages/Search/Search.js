@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './Search.css';
 import pets from "./pets.js";
-console.log(pets);
 
-export class Card extends Component {
+class Card extends Component {
+    hideEmptyFields(e) {
+        console.log("target: ", e.target);
+    }
+
     render() {
         return (
             <section id="pet_card">
@@ -13,19 +16,42 @@ export class Card extends Component {
                         alt="Pet"/>
                 </section>
 
-                <section id="petDescription">
+                <section id="petDescription" onLoad={this.hideEmptyFields}>
                     <div>
-                        <div>
+                        <div className="petData">
                             <label>Name: </label>
-                            <span id="pet_name">{this.props.pet.name}</span>
+                            <span id="name">{this.props.pet.name}</span>
                         </div>
-                        <div>
+                        <div className="petData">
+                            <span id="desc1">{this.props.pet.desc1}</span>
+                        </div>
+                        <div className="petData">
+                            <label>Personality: </label>
+                            <span id="personality">{this.props.pet.personality.join(",")}</span>
+                        </div>
+                        <div className="petData">
+                            <label>Height: </label>
+                            <span id="height">{this.props.pet.height}</span>
+                        </div>
+                        <div className="petData">
+                            <label>Weight: </label>
+                            <span id="weight">{this.props.pet.weight}</span>
+                        </div>
+                        <div className="petData">
                             <label>Age: </label>
-                            <span id="page_age">{this.props.pet.age}</span>
+                            <span id="age">{this.props.pet.age}</span>
                         </div>
-                    </div>
-                    <div>
-
+                        <div className="petData">
+                            <label>Neutered: </label>
+                            <span id="neutered">{this.props.pet.neutered}</span>
+                        </div>
+                        <div className="petData">
+                            <label>Hypoallergenic: </label>
+                            <span id="hypoallergenic">{this.props.pet.hypoallergenic}</span>
+                        </div>
+                        <div className="petData">
+                            <span id="desc2">{this.props.pet.desc2}</span>
+                        </div>
                     </div>
                 </section>
             </section>
