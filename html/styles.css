@@ -3,13 +3,18 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-family: "Muli", sans-serif;
+  color:rgba(99, 34, 99, 0.849);
+}
+/* nav sign in button */
+.btn-outline-success {
+  border-color: rgba(99, 34, 99, 0.849) !important;
+  color: rgba(99, 34, 99, 0.849) !important;
 }
 
 #bg-main {
   background-image: url(bg-doggies.jpg);
   background-size: cover;
   background-position: center center;
-
 }
 /* left jumbotron image */
 .placeHome {
@@ -20,6 +25,7 @@ body {
   height: 225px;
   margin-top: 1rem;
   width: 100%;
+  align-content: space-around;
 }
 /* right jumbotron image */
 .findDog {
@@ -30,8 +36,9 @@ body {
   height: 225px;
   margin-top: 1rem;
   width: 100%;
+  align-content: space-around;
 }
-
+/* footer text */
 .write {
   text-align: center;
   font-size: 50%;
@@ -41,26 +48,56 @@ body {
   margin-bottom: 0;
   color: rgb(109, 45, 109);
 }
+
 a {
   color: rgb(109, 45, 109) !important;
 }
+
 h4 {
-  color: lightgray!important;
+  color: rgba(99, 34, 99, 0.849)!important;
 }
+
 .container-full {
   margin-top: 900px;
   background-image: url(bg-doggies.jpg);
   background-size: cover;
   background-position: bottom;
-  background-repeat: no-repeat'
+  background-repeat: no-repeat;
+}
+
+.jumbotron h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: auto;
+  border-color:rgba(99, 34, 99, 0.849); 
+}
+
+.button-text {
+  color:rgba(99, 34, 99, 0.849);
+}
+.text-right{
+  margin-top: -3rem;
+  text-align: right;
+  color: whitesmoke;
+  margin: auto;
+}
+
+.text-center{
+  margin-top: -3rem;
+  text-align: center;
+  color: whitesmoke;
+}
+.container-findDog{
+  display: flex;
+  flex-direction: column;
 }
 .container-home {
   margin-top: -900px;
   padding-top: 24px;
-  /* margin-bottom: -600px; */
   padding: 0 !important;
   background: none;
-}
+  background-color: rgba(99, 34, 99, 0.849);
+  display: flex;}
 
 /* individual cards */
 .card {
@@ -115,5 +152,6 @@ ul {
 }
 
 .bold-text {
+  color:rgba(99, 34, 99, 0.849);
   font-weight: 900;
 }

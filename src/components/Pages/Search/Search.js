@@ -16,14 +16,25 @@ class Search extends Component {
         this.state = {
             currentPet: undefined,
             currentIndex: 0,
+            modalIsOpen: false
         };
 
 
 
-        this.showHideFacets = this.showHideFacets.bind(this);
-        this.getNextPet = this.getNextPet.bind(this);
-        this.getPrevPet = this.getPrevPet.bind(this);
-    }
+            this.showHideFacets = this.showHideFacets.bind(this);
+            this.getNextPet = this.getNextPet.bind(this);
+            this.getPrevPet = this.getPrevPet.bind(this);
+            this.openModal = this.openModal.bind(this);
+            this.closeModal = this.closeModal.bind(this);
+        }
+
+        openModal() {
+            this.setState({modalIsOpen: true});
+        }
+
+        closeModal() {
+            this.setState({modalIsOpen: false});
+        }
 
     componentDidMount(){
         this.setState({
@@ -171,9 +182,48 @@ class Search extends Component {
                     </div>
                     <img src={'/image/arrownext.png'} height="50" onClick={this.getNextPet} alt="Next Pet"/>
                 </div>
+                <Modal
+                    className="modalBox"
+                    isOpen={this.state.modalIsOpen}
+                    onRequestClose={this.closeModal}
+                >
+                    <form action="https://formspree.io/phdumaresq@gmail.com"
+                          method="POST"
+                          className="formspreeForm"
+                    >
+                        <input type="hidden" name="_next" value={<Redirect to="/"/>}></input>
+                        <input
+                            name="name"
+                            type="text"
+                            placeholder="Name"
+                            className="nameInput"
+                            required={true}
+                            value={this.state.name}
+                            onChange={this.handleInputChange}/>
+                        <input
+                            name="_replyto"
+                            type="email"
+                            placeholder="Email"
+                            className="emailInput"
+                            value={this.state.email}
+                            onChange={this.handleInputChange}
+                            required={true}
+                        />
+                        <textarea placeholder="I'm interested in your pet..."
+                                  name="textbox"
+                                  className="foundMatch"
+                                  value={this.state.textbox}
+                                  onChange={this.handleInputChange}
+                                  required={true}
+                        />
+                        <input type="submit" value= "Send"/>
+                        <input type="submit" value="Close" onClick={this.closeModal}/>
+                    </form>
+                </Modal>
             </section>
         );
     }
 }
+
 
 export default Search;
