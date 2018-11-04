@@ -1,10 +1,10 @@
 .PostPage {
 display: flex;
 position: relative;
-left: 30%;
+left: 35%;
 top: 4rem;
 align-content: center;
-text-align: center;
+width: 70%;
 }
 
 .PostPage img {
@@ -17,33 +17,22 @@ max-height: 205px;
     height: 205px;
     border-style: dotted;
     text-align: center;
-    margin-left: 28%;
+    margin-left: 27%;
+    margin-bottom: 5%;
 }
 
 .dropText {
     margin-top: 30%;
 }
 
-.PostPage .titleDrop {
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: 2%;
-}
-
 .button {
     display: inline;
     width: 50%;
+    position: relative;
+    left: 5rem;
 }
 
 .perfectMatch {
     width: 100%;
-}
-
-.inputBox {
-    margin-bottom: 1rem;
-    width: 100%;
-}
-.email {
-    margin-bottom: 1rem;
-    width: 100%;
+    margin-left: 27%;
 }
