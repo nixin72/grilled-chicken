@@ -192,7 +192,7 @@ class Search extends Component {
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeModal}
                 >
-                    <form action={"https://formspree.io/" + petOwner.email} 
+                    <form action={"https://formspree.io/" + petOwner.email}
                           method="POST"
                     >
                     <div className="formspreeForm">
@@ -230,6 +230,5 @@ class Search extends Component {
         );
     }
 }
-
 
 export default Search;

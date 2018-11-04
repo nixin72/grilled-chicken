@@ -19,7 +19,7 @@ class Header extends Component {
                     <Link to={'/post'}>Place</Link>
                 </button>
                 <button className="btn btn-outline-alert my-2 my-sm-0 mx-1 bold-text">
-                    <Link to={'/signUp'}>Join</Link>
+                    <Link to={'/join'}>Join</Link>
                 </button>
                 <button className="btn btn-outline-success my-2 my-sm-0 mx-1 bold-text">
                     <Link to={'/login'}>Sign-In</Link>

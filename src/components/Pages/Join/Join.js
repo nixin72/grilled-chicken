@@ -2,22 +2,21 @@ import React, {Component} from 'react';
 import './Join.css';
 
 class Join extends Component {
-
-
-
-
     render() {
         return (
-          <form name="contact" method="POST" netlify>
-  <p>
-    <label>Email: <input type="text" name="name" /></label>
+          <form name="signup" method="POST" netlify>
+          <p>
+    <input type="text" name="name" placeholder="Full name"/>
   </p>
   <p>
-    <label>Password: <input type="password" name="message"></input></label>
+    <input type="text" name="email" placeholder="Email"/>
+  </p>
+  <p>
+   <input type="password" name="password" placeholder="password"></input>
   </p>
   <div data-netlify-recaptcha></div>
   <p>
-    <input type="submit" value="Submit"/>
+    <input className="send" type="submit" value="Submit"/>
   </p>
 </form>
         );

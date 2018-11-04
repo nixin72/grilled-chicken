@@ -9,6 +9,7 @@ import PostPage from "./Pages/PostPage/PostPage";
 import Search from "./Pages/Search/Search";
 import DbContext from './../store/db-context';
 import Login from "./Pages/Login/Login";
+import Join from "./Pages/Join/Join";
 
 import {AnimalDesire, AnimalPropositions, Auth} from "../model/db";
 import {Breed} from "../model/breed";
@@ -77,6 +78,12 @@ class App extends Component {
                         <Route
                             exact path="/login"
                             render={(props) => <Login
+                                {...props}
+                            />}
+                            />
+                            <Route
+                            exact path="/join"
+                            render={(props) => <Join
                                 {...props}
                             />}
                         />
