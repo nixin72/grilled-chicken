@@ -85,7 +85,6 @@ class Search extends Component {
                     </button>
 
                     <section id="searchForm">
-                        <form>
                             <div className="facet">
                                 <div>
                                     <label>Breed: </label>
@@ -163,7 +162,6 @@ class Search extends Component {
                                     <input type="checkbox" name="hypoallergenic" value="Hypo-Allergenic"/>
                                 </div>
                             </div>
-                        </form>
                         <input type="button" value="Apply Filter" />
                     </section>
                 </div>

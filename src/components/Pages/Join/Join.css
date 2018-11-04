@@ -1,16 +1,15 @@
 input {
-    margin-left: 24%;
     padding: 0.9%;
     border: none;
 }
 
 form {
-    margin-top: 10%;
-    margin-left: 35%;
     padding: 4rem;
-    background-color: rgba(99, 34, 99, 0.671);
-    width: 30%;
-    
+    width: 40%;
+    margin: auto;
+    background: rgba(99,34,99,.849);
+    color: white;
+    padding: 1%;
 }
 
 .send {
