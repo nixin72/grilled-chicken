@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Login.css';
-import DbContext from './../../../store/db-context';
+import DbContext from './../../../store/db-context'
 
 class Login extends Component {
 
