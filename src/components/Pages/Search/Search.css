@@ -10,6 +10,10 @@
     
 }
 
+#vote img {
+    margin: 0 15%;
+}
+
 #pet_display {
     width: 40%;
     margin: auto;
@@ -18,6 +22,7 @@
 .flex {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
 }
 
 #searchForm {
