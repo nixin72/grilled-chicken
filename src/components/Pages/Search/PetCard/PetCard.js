@@ -23,12 +23,12 @@ class PetCard extends Component {
     render() {
         const {pet} = this.props;
         // console.log(pet);
-        return (
+        return (           
             <section id="pet_card">
                 <section id="petImage">
                     {
                         pet.img
-                            ? <img src={pet.img} alt="Pet"/>
+                            ? <img src={pet.img} alt="Pet" width="300" />
                             : <img src='/image/default_pet.jpg' width="300px" height="205px"/>
                     }
                 </section>

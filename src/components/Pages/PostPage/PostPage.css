@@ -1,25 +1,38 @@
 .PostPage {
 display: flex;
 position: relative;
-left: 40rem;
-top: 8rem;
+left: 35%;
+top: 4rem;
+align-content: center;
+width: 70%;
 }
 
 .PostPage img {
-max-width: 400px;
-max-height: 400px;
+max-width: 300px;
+max-height: 205px;
 }
 
-#dropZone {
+.dropZone {
     width: 300px;
     height: 205px;
+    border-style: dotted;
+    text-align: center;
+    margin-left: 27%;
+    margin-bottom: 5%;
+}
+
+.dropText {
+    margin-top: 30%;
 }
 
 .button {
     display: inline;
     width: 50%;
+    position: relative;
+    left: 5rem;
 }
 
 .perfectMatch {
     width: 100%;
+    margin-left: 27%;
 }

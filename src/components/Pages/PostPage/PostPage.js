@@ -53,10 +53,7 @@
     }
 
   render() {
-    let petOwner = {};
-    if (this.state.currentPet){
-        petOwner = Auth.filter((user)=>user.id === this.state.currentPet.userId);
-    }
+    const logInUser = this.context.authUser;
     const {files} = this.state;
     let thumbs = ''
     if(files){
@@ -74,32 +71,31 @@
           <form id="posterForm" onSubmit={this.handleSubmit}>
           <div className="dropzone">
           <Dropzone
-          classID="dropZone"
+          className="dropZone"
           multiple={false}
           onDrop={this.onDrop.bind(this)}
           onFileDialogCancel={this.onCancel.bind(this)}
           >
-          <p>Drop a photo of your pet here ^^</p>
+          <p className="dropText">Drop a photo of your pet here ^^</p>
           </Dropzone>
           </div>
-          <h2>Dropped photo</h2>
           <aside>
           {thumbs}
           </aside>
           <input
           name="name"
-          type="text"
-          placeholder={petOwner.email}
-          className="nameInput"
+          type="hidden"
+          placeholder={logInUser.name}
+          className="inputBox"
           required={true}
-          value={petOwner.email} 
+          value={logInUser.name} 
           onChange={this.handleInputChange}/>
           <input  
           name="email"
-          type="email" 
+          type="hidden" 
           placeholder="Email"
-          className="emailInput"
-          value={petOwner.email} 
+          className="email"
+          value={logInUser.email} 
           onChange={this.handleInputChange}
           required={true}
           />
