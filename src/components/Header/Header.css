@@ -1,0 +1,9 @@
+.bold-text {
+    color:rgba(99, 34, 99, 0.849);
+    font-weight: 900;
+  }
+ /* nav sign in button */
+.btn-outline-success {
+    border-color: rgba(99, 34, 99, 0.849) !important;
+    color: rgba(99, 34, 99, 0.849) !important;
+  } 
