@@ -39,7 +39,10 @@
 
     handleSubmit = (event) => {
       const {name, email, textbox, file} = this.state;
-      axios.post('/animals', JSON.stringify({name, email, textbox, file}));
+
+      this.context.saveProposition()
+
+      // axios.post('/animals', JSON.stringify({name, email, textbox, file}));
     }
 
     handleInputChange = (event) => {
@@ -92,23 +95,23 @@
           placeholder={petOwner.email}
           className="nameInput"
           required={true}
-          value={petOwner.email} 
+          value={petOwner.email}
           onChange={this.handleInputChange}/>
-          <input  
+          <input
           name="email"
-          type="email" 
+          type="email"
           placeholder="Email"
           className="emailInput"
-          value={petOwner.email} 
+          value={petOwner.email}
           onChange={this.handleInputChange}
           required={true}
           />
-          <textarea placeholder="What I want for my pet" 
+          <textarea placeholder="What I want for my pet"
           name="textbox"
-          className="perfectMatch" 
+          className="perfectMatch"
           value={this.state.textbox}
           onChange={this.handleInputChange}
-          required={true} 
+          required={true}
           />
           <input className="button" type="submit" value= "Submit"/>
           <input className="button" type="submit" value="Clear" onClick={this.clearForm}/>
