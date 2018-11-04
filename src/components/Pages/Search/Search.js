@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
+import pets from "./pets.js";
+console.log(pets);
 
 export class Card extends Component {
     render() {
@@ -7,7 +9,7 @@ export class Card extends Component {
             <section id="pet_card">
                 <section id="petImage">
                     <img 
-                        src="https://pbs.twimg.com/profile_images/962170088941019136/lgpCD8X4_400x400.jpg" 
+                        src={this.props.pet.img} 
                         alt="Pet"/>
                 </section>
 
@@ -15,11 +17,11 @@ export class Card extends Component {
                     <div>
                         <div>
                             <label>Name: </label>
-                            <span id="pet_name"></span>
+                            <span id="pet_name">{this.props.pet.name}</span>
                         </div>
                         <div>
                             <label>Age: </label>
-                            <span id="page_age"></span>
+                            <span id="page_age">{this.props.pet.age}</span>
                         </div>
                     </div>
                     <div>
@@ -35,16 +37,51 @@ class Search extends Component {
     constructor(props) {
         super(props);
 
+        this.currentIndex = 0;
+        this.currentPet = pets[this.currentIndex];
+
+        this.petComponent = <Card pet={this.currentPet} />;
+
         this.showHideFacets = this.showHideFacets.bind(this);
+        this.getNextPet = this.getNextPet.bind(this);
+        this.getPrevPet = this.getPrevPet.bind(this);
     }
 
     showHideFacets() {
         function isVisible(e) {
-            return !!( e.offsetWidth || e.offsetHeight || e.getClientRects().length );
+            return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
         }
 
         let form = document.querySelector("#searchForm");
         form.style.display = isVisible(form) ? "none" : "block";
+    }
+
+    getNextPet() {
+        console.log(this.currentPet);
+        if (this.currentIndex == pets.length-1) {
+            this.currentIndex = 0;
+        }
+        else {
+            this.currentIndex++;
+        }
+
+        this.currentPet = pets[this.currentIndex];
+        this.petComponent = <Card pet={this.currentPet} />;
+        this.render();
+    }
+
+    getPrevPet() {
+        console.log(this.currentPet);
+        if (this.currentIndex == 0) {
+            this.currentIndex = pets.length-1;
+        }
+        else {
+            this.currentIndex--;
+        }
+
+        this.currentPet = pets[this.currentIndex];
+        this.petComponent = <Card pet={this.currentPet} />;
+        this.render();
     }
 
     render() {
@@ -128,22 +165,31 @@ class Search extends Component {
 
                             <div className="facet">
                                 <div>
-                                    <label>hypoallergenic: </label>
+                                    <label>hypoallergenic:</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" name="hypoallergenic" value="Hypo-Allergenic" />
                                 </div>
                             </div>
                         </form>
-                    </section>     
+                    </section>   
+                    <section>
+                        
+                    </section>  
                 </div>
 
                 <div id="pet_display" className="flex">
                     <img src={'/image/arrowprev.png'} height="50" onClick={this.getPrevPet} alt="Previous Pet" />
-                    <Card />
+                    <div>
+                        {this.petComponent}
+                        <br />
+                        <div className="flex" id="vote">
+                            <img src={'/image/upvote.png'} alt="Like button" height="50"/>
+                            <img src={'/image/downvote.png'} alt="Dislike button" height="50" />
+                        </div>
+                    </div>
                     <img src={'/image/arrownext.png'} height="50" onClick={this.getNextPet} alt="Next Pet" />
                 </div>
-                
             </section>
         );
     }

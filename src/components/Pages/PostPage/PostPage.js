@@ -51,21 +51,18 @@
       });
     }
 
-    render() {
-      const {files} = this.state;
-      let thumbs = ''
-      if(files){
-      thumbs = files.map(file => (
-        <div>
-        <div>
-        <img 
-        src={file.preview}
-        />
-        </div>
-        </div>
-      ));
-    }
-      
+  render() {
+    const {files} = this.state;
+    let thumbs = ''
+    if(files){
+    thumbs = files.map(file => (
+      <div>
+      <div>
+      <img src={file.preview} alt="" />
+      </div>
+      </div>
+    ));
+  }
 
       return (
         <div className="PostPage">
