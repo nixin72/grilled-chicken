@@ -4,7 +4,7 @@ import './Join.css';
 class Join extends Component {
     render() {
         return (
-          <div>
+          <div id="register">
             <h1>Register here!</h1>
             <form name="signup" method="POST" netlify>
               <p>

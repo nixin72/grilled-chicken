@@ -7,6 +7,13 @@
     height: 100vh;
 }
 
+h1 {
+  padding-bottom: 5%;
+  color: white;
+  width: 100%;
+  text-align: center
+}
+
 .placeHome {
     background-image: url(./pickme.jpg);
     background-size: cover;

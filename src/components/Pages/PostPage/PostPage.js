@@ -67,7 +67,8 @@
   }
 
       return (
-        <div className="PostPage">
+        <div className="PostPage"><div>
+          <h1>Upload pet's information here</h1>
           <form id="posterForm" onSubmit={this.handleSubmit}>
           <div className="dropzone">
           <Dropzone
@@ -109,6 +110,8 @@
           <input className="button" type="submit" value= "Submit"/>
           <input className="button" type="submit" value="Clear" onClick={this.clearForm}/>
           </form>
+        </div>
+          
         </div>
       );
     }

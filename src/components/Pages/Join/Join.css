@@ -3,7 +3,7 @@ input {
     border: none;
 }
 
-form {
+#register {
     padding: 4rem;
     width: 40%;
     margin: auto;

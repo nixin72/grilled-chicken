@@ -8,6 +8,7 @@ class Home extends Component {
     return (
         <div className="Home jumbotron container-home">
             <div className="container">
+                <h1>Welcome to Doggie Match!</h1>
                 <div className="row">
                     <div className="col-6 col-sm-6">
                         <div className="jumbotron placeHome">
