@@ -1,0 +1,19 @@
+.flex {
+    display: flex;
+    text-align: right;
+}
+
+.Login {
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex > div {
+    margin: 1% 5%;
+}
+
+.flex div label, .flex div input {
+    margin: 1%;
+}
