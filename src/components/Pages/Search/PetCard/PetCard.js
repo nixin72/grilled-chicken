@@ -23,7 +23,7 @@ class PetCard extends Component {
     render() {
         const {pet} = this.props;
         // console.log(pet);
-        return (
+        return (           
             <section id="pet_card">
                 <section id="petImage">
                     {

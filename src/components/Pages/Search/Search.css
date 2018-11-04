@@ -22,7 +22,8 @@
 .flex {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    /* justify-content: center;
+    align-content: center; */
 }
 
 #searchForm {
