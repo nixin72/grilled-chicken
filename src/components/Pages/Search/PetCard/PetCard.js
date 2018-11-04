@@ -43,40 +43,68 @@ class PetCard extends Component {
                                 </div>
                                 : ''
                         }
-                        <div className="petData">
-                            <label>Name: </label>
-                            <span id="name">{this.props.pet.name}</span>
-                        </div>
-                        <div className="petData">
-                            <span id="desc1">{this.props.pet.desc1}</span>
-                        </div>
-                        <div className="petData">
+                        {
+                            pet.desc1
+                            ?   <div className="petData">
+                                <span id="desc1">{pet.desc1}</span>
+                                </div>
+                            : ''
+                        }
+                        {
+                            pet.personality.join
+                            ?<div className="petData">
                             <label>Personality: </label>
-                            <span id="personality">{this.props.pet.personality.join(",")}</span>
-                        </div>
-                        <div className="petData">
+                            <span id="personality">{pet.personality.join(",")}</span>
+                            </div>
+                            :''
+                        }
+                        {
+                            pet.height
+                            ?  <div className="petData">
                             <label>Height: </label>
-                            <span id="height">{this.props.pet.height}</span>
-                        </div>
-                        <div className="petData">
+                            <span id="height">{pet.height}</span>
+                            </div>
+                            :''
+                        }
+                        {
+                            pet.weight
+                            ? <div className="petData">
                             <label>Weight: </label>
-                            <span id="weight">{this.props.pet.weight}</span>
-                        </div>
-                        <div className="petData">
-                            <label>Age: </label>
-                            <span id="age">{this.props.pet.age}</span>
-                        </div>
-                        <div className="petData">
+                            <span id="weight">{pet.weight}</span>
+                            </div>
+                            :''
+                        }
+                       {
+                           pet.age
+                           ?<div className="petData">
+                           <label>Age: </label>
+                           <span id="age">{pet.age}</span>
+                            </div>
+                            :''
+                       }
+                        {
+                            pet.neutered
+                            ? <div className="petData">
                             <label>Neutered: </label>
-                            <span id="neutered">{this.props.pet.neutered}</span>
-                        </div>
-                        <div className="petData">
-                            <label>Hypoallergenic: </label>
-                            <span id="hypoallergenic">{this.props.pet.hypoallergenic}</span>
-                        </div>
-                        <div className="petData">
-                            <span id="desc2">{this.props.pet.desc2}</span>
-                        </div>
+                            <span id="neutered">{pet.neutered}</span>
+                            </div>
+                            :''
+                        }
+                       {
+                           pet.hypoallergenic
+                           ?<div className="petData">
+                           <label>Hypoallergenic: </label>
+                           <span id="hypoallergenic">{pet.hypoallergenic}</span>
+                            </div>
+                            :''
+                       }
+                        {
+                            pet.desc2
+                            ?<div className="petData">
+                            <span id="desc2">{pet.desc2}</span>
+                            </div>
+                            :''
+                        }                        
                     </div>
                 </section>
             </section>
