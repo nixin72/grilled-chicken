@@ -8,29 +8,51 @@
 
     export class Card extends Component {
         render() {
-            return (
-                <section id="pet_card">
-                    <section id="petImage">
-                        <img 
-                            src={this.props.pet.img} 
-                            alt="Pet"/>
-                    </section>
-
-                    <section id="petDescription">
-                        <div>
-                            <div>
-                                <label>Name: </label>
-                                <span id="pet_name">{this.props.pet.name}</span>
-                            </div>
-                            <div>
-                                <label>Age: </label>
-                                <span id="page_age">{this.props.pet.age}</span>
-                            </div>
+        return (
+            <section id="pet_card">
+                <section id="petImage">
+                    <img 
+                        src={this.props.pet.img} 
+                        alt="Pet"/>
+                </section>
+                </section>
+                <section id="petDescription" onLoad={this.hideEmptyFields}>
+                    <div>
+                        <div className="petData">
+                            <label>Name: </label>
+                            <span id="name">{this.props.pet.name}</span>
                         </div>
-                        <div>
-
+                        <div className="petData">
+                            <span id="desc1">{this.props.pet.desc1}</span>
                         </div>
-                    </section>
+                        <div className="petData">
+                            <label>Personality: </label>
+                            <span id="personality">{this.props.pet.personality.join(",")}</span>
+                        </div>
+                        <div className="petData">
+                            <label>Height: </label>
+                            <span id="height">{this.props.pet.height}</span>
+                        </div>
+                        <div className="petData">
+                            <label>Weight: </label>
+                            <span id="weight">{this.props.pet.weight}</span>
+                        </div>
+                        <div className="petData">
+                            <label>Age: </label>
+                            <span id="age">{this.props.pet.age}</span>
+                        </div>
+                        <div className="petData">
+                            <label>Neutered: </label>
+                            <span id="neutered">{this.props.pet.neutered}</span>
+                        </div>
+                        <div className="petData">
+                            <label>Hypoallergenic: </label>
+                            <span id="hypoallergenic">{this.props.pet.hypoallergenic}</span>
+                        </div>
+                        <div className="petData">
+                            <span id="desc2">{this.props.pet.desc2}</span>
+                        </div>
+                    </div>
                 </section>
             );
         }
