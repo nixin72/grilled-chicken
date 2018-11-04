@@ -28,8 +28,8 @@ class PetCard extends Component {
                 <section id="petImage">
                     {
                         pet.img
-                            ? <img src={pet.img} alt="Pet" width="400"/>
-                            : <img src='/image/default_pet.jpg'/>
+                            ? <img src={pet.img} alt="Pet"/>
+                            : <img src='/image/default_pet.jpg' width="300px" height="205px"/>
                     }
                 </section>
 
@@ -38,21 +38,21 @@ class PetCard extends Component {
                         {
                             pet.name
                                 ? <div className="petData">
-                                    <label>Name: </label>
+                                    <label><h3>Name:</h3></label>
                                     <span id="name">{pet.name}</span>
                                 </div>
                                 : ''
                         }
                         {
                             pet.desc1
-                            ?   <div className="petData">
+                            ?   <div className="petData angle-text">
                                 <span id="desc1">{pet.desc1}</span>
                                 </div>
                             : ''
                         }
                         {
                             pet.personality.join
-                            ?<div className="petData">
+                            ?<div className="petData bold-text">
                             <label>Personality: </label>
                             <span id="personality">{pet.personality.join(",")}</span>
                             </div>
@@ -60,7 +60,7 @@ class PetCard extends Component {
                         }
                         {
                             pet.height
-                            ?  <div className="petData">
+                            ?  <div className="petData bold-text">
                             <label>Height: </label>
                             <span id="height">{pet.height}</span>
                             </div>
@@ -68,7 +68,7 @@ class PetCard extends Component {
                         }
                         {
                             pet.weight
-                            ? <div className="petData">
+                            ? <div className="petData bold-text">
                             <label>Weight: </label>
                             <span id="weight">{pet.weight}</span>
                             </div>
@@ -76,7 +76,7 @@ class PetCard extends Component {
                         }
                        {
                            pet.age
-                           ?<div className="petData">
+                           ?<div className="petData bold-text">
                            <label>Age: </label>
                            <span id="age">{pet.age}</span>
                             </div>
@@ -84,7 +84,7 @@ class PetCard extends Component {
                        }
                         {
                             pet.neutered
-                            ? <div className="petData">
+                            ? <div className="petData bold-text">
                             <label>Neutered: </label>
                             <span id="neutered">{pet.neutered}</span>
                             </div>
@@ -92,7 +92,7 @@ class PetCard extends Component {
                         }
                        {
                            pet.hypoallergenic
-                           ?<div className="petData">
+                           ?<div className="petData bold-text">
                            <label>Hypoallergenic: </label>
                            <span id="hypoallergenic">{pet.hypoallergenic}</span>
                             </div>
