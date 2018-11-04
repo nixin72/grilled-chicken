@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
+import pets from "./pets.js";
+console.log(pets);
 
 export class Card extends Component {
     render() {
@@ -15,11 +17,11 @@ export class Card extends Component {
                     <div>
                         <div>
                             <label>Name: </label>
-                            <span id="pet_name"></span>
+                            <span id="pet_name">{this.props.pet.name}</span>
                         </div>
                         <div>
                             <label>Age: </label>
-                            <span id="page_age"></span>
+                            <span id="page_age">{this.props.pet.age}</span>
                         </div>
                     </div>
                     <div>
@@ -35,16 +37,35 @@ class Search extends Component {
     constructor(props) {
         super(props);
 
+        this.currentIndex = 0;
+        this.currentPet = pets[this.currentIndex];
+
         this.showHideFacets = this.showHideFacets.bind(this);
+        this.getNextPet = this.getNextPet.bind(this);
+        this.getPrevPet = this.getPrevPet.bind(this);
     }
 
     showHideFacets() {
         function isVisible(e) {
-            return !!( e.offsetWidth || e.offsetHeight || e.getClientRects().length );
+            return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
         }
 
         let form = document.querySelector("#searchForm");
         form.style.display = isVisible(form) ? "none" : "block";
+    }
+
+    getNextPet() {
+        if (this.currentIndex != pets.length-1) {
+            this.currentIndex++;
+            this.currentPet = pets[this.currentIndex];
+        }
+    }
+
+    getPrevPet() {
+        if (this.currentIndex != 0) {
+            this.currentIndex--;
+            this.currentPet = pets[this.currentIndex];
+        }
     }
 
     render() {
@@ -140,10 +161,9 @@ class Search extends Component {
 
                 <div id="pet_display" className="flex">
                     <img src={'/image/arrowprev.png'} height="50" onClick={this.getPrevPet} alt="Previous Pet" />
-                    <Card />
+                    <Card pet={this.currentPet} />
                     <img src={'/image/arrownext.png'} height="50" onClick={this.getNextPet} alt="Next Pet" />
                 </div>
-                
             </section>
         );
     }

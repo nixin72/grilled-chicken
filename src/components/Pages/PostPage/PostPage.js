@@ -53,9 +53,7 @@ class PostPage extends Component {
     thumbs = files.map(file => (
       <div>
       <div>
-      <img 
-      src={file.preview}
-      />
+      <img src={file.preview} alt="" />
       </div>
       </div>
     ));
