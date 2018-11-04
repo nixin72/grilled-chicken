@@ -20,8 +20,6 @@ class Search extends Component {
             modalIsOpen: false,
         };
 
-
-
             this.showHideFacets = this.showHideFacets.bind(this);
             this.getNextPet = this.getNextPet.bind(this);
             this.getPrevPet = this.getPrevPet.bind(this);
@@ -55,7 +53,7 @@ class Search extends Component {
     getNextPet() {
         const {currentIndex} = this.state;
         const pets = this.context.animalPropositionsDb;
-        let nextIndex = pets.length > currentIndex ? currentIndex + 1 : currentIndex;
+        let nextIndex = pets.length-1 > currentIndex ? currentIndex + 1 : 0;
         this.setState({
             currentPet: pets[nextIndex],
             currentIndex: nextIndex,
@@ -65,11 +63,15 @@ class Search extends Component {
     getPrevPet() {
         const {currentIndex} = this.state;
         const pets = this.context.animalPropositionsDb;
-        let prevIndex = currentIndex !== 0 ? currentIndex - 1 : currentIndex;
+        let prevIndex = currentIndex !== 0 ? currentIndex - 1 : pets.length-1;
         this.setState({
             currentPet: pets[prevIndex],
             currentIndex: prevIndex,
         });
+    }
+
+    filterResults(facets) {
+        console.log(facets);
     }
 
     render() {
@@ -166,9 +168,7 @@ class Search extends Component {
                                 </div>
                             </div>
                         </form>
-                    </section>
-                    <section>
-
+                        <input type="button" value="Apply Filter" onClick={this.filterResults(new FormData(document.querySelector('form')))} />
                     </section>
                 </div>
 
