@@ -1,0 +1,41 @@
+#pet_card {
+    margin: auto;
+    border: thin solid black;
+}
+
+.flex {
+    display: flex;
+}
+
+#searchForm {
+    width: 40%;
+    margin: auto;
+    display: none;
+}
+
+.facet {
+    margin: auto;
+    display: flex;
+}
+
+.dropDownButton {
+    display: flex;
+}
+
+.form_section span {
+    text-align: right;
+    border-bottom: thin solid black;
+    font-size: 1.5em;
+}
+
+.facet div:first-child {
+    text-align: right;
+    width: 50%;
+    margin-right: 2%;
+}
+
+.facet div:last-child {
+    text-align: left;
+    width: 50%;
+    margin-left: 2%;
+}
