@@ -2,13 +2,14 @@
   import './PostPage.css';
   import axios from 'axios';
   import Dropzone from 'react-dropzone';
+  import DbContext from './../../../store/db-context';
+  import {Auth} from '../../../model/db';
 
   class PostPage extends Component {
+    static contextType = DbContext;
     constructor(props){
       super(props);
       this.state = {
-          name: '',
-          email: '',
           textbox: '',
           files: []
       };
@@ -52,6 +53,10 @@
     }
 
   render() {
+    let petOwner = {};
+    if (this.state.currentPet){
+        petOwner = Auth.filter((user)=>user.id === this.state.currentPet.userId);
+    }
     const {files} = this.state;
     let thumbs = ''
     if(files){
@@ -85,15 +90,15 @@
           type="text"
           placeholder="Name" 
           className="nameInput"
-          required={true}  
-          value={this.state.name} 
+          required={true}
+          value={petOwner.email} 
           onChange={this.handleInputChange}/>
           <input  
           name="email"
           type="email" 
           placeholder="Email"
-          className="emailInput" 
-          value={this.state.email} 
+          className="emailInput"
+          value={petOwner.email} 
           onChange={this.handleInputChange}
           required={true}
           />

@@ -8,7 +8,7 @@ export const Auth = [
     },
     {
         "id": 2,
-        "email": "test2@test.com",
+        "email": "phdumaresq@gmail.com",
         "name": "User Name 2",
         "password": "1"
     }

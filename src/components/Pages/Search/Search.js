@@ -4,12 +4,11 @@ import pets from "./pets.js";
 import DbContext from './../../../store/db-context';
 import Modal from 'react-modal';
 import {Redirect} from 'react-router-dom';
-
+import {Auth} from '../../../model/db';
 import PetCard from './PetCard/PetCard';
 
 
 class Search extends Component {
-
     static contextType = DbContext;
 
     constructor(props) {
@@ -18,7 +17,7 @@ class Search extends Component {
         this.state = {
             currentPet: undefined,
             currentIndex: 0,
-            modalIsOpen: false
+            modalIsOpen: false,
         };
 
 
@@ -74,6 +73,12 @@ class Search extends Component {
     }
 
     render() {
+
+        const logInUser = this.context.authUser;
+        let petOwner = {};
+        if (this.state.currentPet){
+            petOwner = Auth.filter((user)=>user.id === this.state.currentPet.userId);
+        }
         return (
             <section id="searchPage" className="flex">
                 <div>
@@ -178,8 +183,7 @@ class Search extends Component {
                         }
                         <br/>
                         <div className="flex" id="vote">
-                            <img src={'/image/upvote.png'} alt="Like button" height="50"/>
-                            <img src={'/image/downvote.png'} alt="Dislike button" height="50"/>
+                           <input type="submit" value="I am interested" onClick={this.openModal}/>
                         </div>
                     </div>
                     <img src={'/image/arrownext.png'} height="50" onClick={this.getNextPet} alt="Next Pet"/>
@@ -189,25 +193,25 @@ class Search extends Component {
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeModal}
                 >
-                    <form action="https://formspree.io/phdumaresq@gmail.com"
+                    <form action={"https://formspree.io/" + petOwner.email} 
                           method="POST"
-                          className="formspreeForm"
                     >
+                    <div className="formspreeForm">
                         <input type="hidden" name="_next" value={<Redirect to="/"/>}></input>
                         <input
                             name="name"
-                            type="text"
+                            type="hidden"
                             placeholder="Name"
                             className="nameInput"
                             required={true}
-                            value={this.state.name}
+                            value={logInUser.name}
                             onChange={this.handleInputChange}/>
                         <input
                             name="_replyto"
-                            type="email"
+                            type="hidden"
                             placeholder="Email"
                             className="emailInput"
-                            value={this.state.email}
+                            value={logInUser.email}
                             onChange={this.handleInputChange}
                             required={true}
                         />
@@ -218,9 +222,10 @@ class Search extends Component {
                                   onChange={this.handleInputChange}
                                   required={true}
                         />
-                        <input type="submit" value= "Send"/>
-                        <input type="submit" value="Close" onClick={this.closeModal}/>
-                    </form>
+                        <input className="formButtons" type="submit" value= "Send"/>
+                        <input className="formButtons" type="submit" value="Close" onClick={this.closeModal}/>
+                        </div>
+                        </form>
                 </Modal>
             </section>
         );
