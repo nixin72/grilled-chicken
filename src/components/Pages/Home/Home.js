@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Home.css';
+import {Link} from 'react-router-dom';
 
+// text-center bold-text
 class Home extends Component {
   render() {
     return (
@@ -11,8 +13,7 @@ class Home extends Component {
                         <div className="jumbotron placeHome">
                             <div className="container text-right">
                                 <p className="text-center">Dogs looking for a new home?</p>
-                                <button className="btn btn-outline-alert my-2 my-sm-0 " type="submit"><h1
-                                    className="text-center bold-text">Place</h1></button>
+                                <button className="btn btn-outline-alert my-2 my-sm-0 " type="submit"><Link className="text-center bold-text" to={'/post'}>Place</Link></button>
                             </div>
                         </div>
                     </div>
@@ -20,8 +21,7 @@ class Home extends Component {
                         <div className="jumbotron findDog">
                             <div className="container text-right">
                                 <p className="text-center">Are you looking to adopt a dog?</p>
-                                <button className="btn btn-outline-alert my-2 my-sm-0 " type="submit"><h1
-                                    className="text-center bold-text">Adopt</h1></button>
+                                <button className="btn btn-outline-alert my-2 my-sm-0 " type="submit"><Link className="text-center bold-text" to={'/search'}>Adopt</Link></button>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 #pet_card {
     margin: auto;
     border: thin solid black;
+    text-align: left;
 }
 
 #searchPage {
@@ -22,8 +23,8 @@
 .flex {
     display: flex;
     align-items: flex-start;
-    /* justify-content: center;
-    align-content: center; */
+    justify-content: center;
+    align-content: center;
 }
 
 #searchForm {

@@ -1,13 +1,14 @@
-.Home {
+ body {
     /*margin-top: 900px;*/
-    background-image: url(/image/bg-doggies.jpg);
+    background-image: url(./bg-doggies.jpg);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
-.Home .placeHome {
-    background-image: url(/image/pickme.jpg);
+.placeHome {
+    background-image: url(./pickme.jpg);
     background-size: cover;
     background-position: center center;
     padding-top: 1rem;
@@ -20,8 +21,8 @@
 
 
 /* right jumbotron image */
-.Home .findDog {
-    background-image: url(/image/searching.jpg);
+.findDog {
+    background-image: url(./searching.jpg);
     background-size: cover;
     background-position: center center;
     padding-top: 1rem;
@@ -32,42 +33,42 @@
 }
 
 
-.Home a {
+ a {
     color: rgb(109, 45, 109) !important;
 }
 
-.Home h4 {
+h4 {
     color: rgba(99, 34, 99, 0.849)!important;
 }
 
 
-.Home .jumbotron h1 {
+.jumbotron h1 {
     font-size: 1.5rem;
     font-weight: bold;
     margin: auto;
     border-color:rgba(99, 34, 99, 0.849);
 }
 
-.Home .button-text {
+.button-text {
     color:rgba(99, 34, 99, 0.849);
 }
-.Home .text-right{
+text-right{
     margin-top: -3rem;
     text-align: right;
     color: whitesmoke;
     margin: auto;
 }
-
-.Home .text-center{
+.text-center{
     margin-top: -3rem;
     text-align: center;
     color: whitesmoke;
 }
 
 .container-home {
-    margin-top: -900px;
+    /* margin-top: -900px; */
     padding-top: 24px;
-    padding: 0 !important;
+    /* padding: 0 !important; */
+    padding-bottom: 0;
     background: none;
     background-color: rgba(99, 34, 99, 0.849);
     display: flex;}
@@ -86,3 +87,161 @@
     color:rgba(99, 34, 99, 0.849);
     font-weight: 900;
 }
+
+/* body {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Muli", sans-serif;
+    color:rgba(99, 34, 99, 0.849);
+  } */
+  /* nav sign in button */
+  .btn-outline-success {
+    border-color: rgba(99, 34, 99, 0.849) !important;
+    color: rgba(99, 34, 99, 0.849) !important;
+  }
+  
+  #bg-main {
+    background-image: url(./bg-doggies.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  /* left jumbotron image */
+  .placeHome {
+    background-image: url(./pickme.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding-top: 1rem;
+    height: 225px;
+    margin-top: 1rem;
+    width: 100%;
+    align-content: space-around;
+  }
+  /* right jumbotron image */
+  .findDog {
+    background-image: url(./searching.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding-top: 1rem;
+    height: 225px;
+    margin-top: 1rem;
+    width: 100%;
+    align-content: space-around;
+  }
+  /* footer text */
+  .write {
+    text-align: center;
+    font-size: 50%;
+    font-weight: lighter;
+    padding-top: 1em;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgb(109, 45, 109);
+  }
+  
+  a {
+    color: rgb(109, 45, 109) !important;
+  }
+  
+  h4 {
+    color: rgba(99, 34, 99, 0.849)!important;
+  }
+  
+  .container-full {
+    margin-top: 900px;
+    background-image: url(./bg-doggies.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+  
+  .jumbotron h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto;
+    border-color:rgba(99, 34, 99, 0.849); 
+  }
+  
+  .button-text {
+    color:rgba(99, 34, 99, 0.849);
+  }
+  .text-right{
+    margin-top: -3rem;
+    text-align: right;
+    color: whitesmoke;
+    margin: auto;
+  }
+  
+  .text-center{
+    margin-top: -3rem;
+    text-align: center;
+    color: whitesmoke;
+  }
+  .container-findDog{
+    display: flex;
+    flex-direction: column;
+  }
+  /* .container-home {
+    margin-top: -900px;
+    padding-top: 24px;
+    padding: 0 !important;
+    background: none;
+    background-color: rgba(99, 34, 99, 0.849);
+    display: flex;} */
+  
+  /* individual cards */
+  .card {
+    background-color: white;
+    font-family: "Muli", sans-serif;
+    margin: 0 auto;
+    max-width: 320px;
+    text-align: center;
+    border: double medium #af9fa5;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px 0px #af9fa5;
+  }
+  
+  .name {
+    font-family: "Raleway", sans-serif;
+    text-shadow: 4px 4px 4px #af9fa5;
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  .picture {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  img .card{
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 3px #af9fa5;
+    width: 290px;
+    height: 200px;
+  }
+  
+  #info {
+    border: solid thin #af9fa5;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 5px;
+  }
+  
+  .angle-text {
+    font-style: italic;
+  }
+  
+  p{
+    text-align: left;
+    max-width: 300px;
+  }
+  
+  ul {
+    list-style-type: none;
+    text-align: left;
+  }
+  
+  .bold-text {
+    color:rgba(99, 34, 99, 0.849);
+    font-weight: 900;
+  }
+  

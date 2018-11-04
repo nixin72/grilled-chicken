@@ -25,7 +25,6 @@ class Search extends Component {
             this.getPrevPet = this.getPrevPet.bind(this);
             this.openModal = this.openModal.bind(this);
             this.closeModal = this.closeModal.bind(this);
-            this.filterResults = this.filterResults.bind(this);
         }
 
         openModal() {
@@ -69,11 +68,6 @@ class Search extends Component {
             currentPet: pets[prevIndex],
             currentIndex: prevIndex,
         });
-    }
-
-    filterResults() {
-        let facets = new FormData(document.querySelector('form'));
-        console.log(facets);
     }
 
     render() {
@@ -170,7 +164,7 @@ class Search extends Component {
                                 </div>
                             </div>
                         </form>
-                        <input type="button" value="Apply Filter" onClick={this.filterResults} />
+                        <input type="button" value="Apply Filter" />
                     </section>
                 </div>
 
@@ -198,7 +192,7 @@ class Search extends Component {
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeModal}
                 >
-                    <form action={"https://formspree.io/" + petOwner.email} 
+                    <form action={"https://formspree.io/" + petOwner.email}
                           method="POST"
                     >
                     <div className="formspreeForm">
@@ -236,6 +230,5 @@ class Search extends Component {
         );
     }
 }
-
 
 export default Search;

@@ -2,14 +2,6 @@ import React, {Component} from 'react';
 import './PetCard.css';
 
 class PetCard extends Component {
-
-    constructor(props) {
-        super(props);
-        // this.state = {
-        //     currentPet: undefined,
-        // }
-    }
-
     componentDidMount() {
         // this.setState({
         //     currentPer: this.props.pet,
@@ -22,7 +14,6 @@ class PetCard extends Component {
 
     render() {
         const {pet} = this.props;
-        // console.log(pet);
         return (           
             <section id="pet_card">
                 <section id="petImage">
