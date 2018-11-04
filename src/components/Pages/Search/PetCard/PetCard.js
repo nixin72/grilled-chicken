@@ -28,7 +28,7 @@ class PetCard extends Component {
                 <section id="petImage">
                     {
                         pet.img
-                            ? <img src={pet.img} alt="Pet"/>
+                            ? <img src={pet.img} alt="Pet" width="300" />
                             : <img src='/image/default_pet.jpg' width="300px" height="205px"/>
                     }
                 </section>
